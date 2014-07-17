@@ -4,7 +4,7 @@ package org.flyJenkins.cache.redis;
 import java.io.Serializable;
 
 import org.flyJenkins.cache.redis.model.RedisCacheDto;
-import org.flyJenkins.github.analysis.model.ProjectDto;
+import org.flyJenkins.analysis.model.ProjectDto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

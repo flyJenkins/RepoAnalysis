@@ -4,10 +4,10 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.flyJenkins.cache.redis.model.RedisCacheDto;
 import org.flyJenkins.cache.redis.service.RedisCacheManager;
-import org.flyJenkins.github.analysis.model.GitHubRepoCmd;
-import org.flyJenkins.github.analysis.model.ProjectDto;
-import org.flyJenkins.github.analysis.service.GitHubApiManager;
-import org.flyJenkins.github.analysis.service.GitRepoAnalysisManager;
+import org.flyJenkins.analysis.model.GitHubRepoCmd;
+import org.flyJenkins.analysis.model.ProjectDto;
+import org.flyJenkins.analysis.service.GitHubApiManager;
+import org.flyJenkins.analysis.service.GitRepoAnalysisManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
