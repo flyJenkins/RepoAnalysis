@@ -54,6 +54,18 @@
 			<url>http://repo1.maven.org/maven2</url>
 		</repository>
 		
+		<!-- flyJenkins repository -->
+		<repository>
+			<id>release</id>
+			<name>flyJenkins repository</name>
+			<url>http://nexus.flyjenkins.org/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<name>flyJenkins snapshots</name>
+			<url>http://nexus.flyjenkins.org/content/repositories/snapshots/</url>
+		</repository>
+		
 		<!-- spring repository -->
 		<repository>
 		    <id>com.springsource.repository.bundles.release</id>
