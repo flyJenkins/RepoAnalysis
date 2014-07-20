@@ -10,8 +10,8 @@
 	
 	<distributionManagement>
 		<repository>
-			<id>snapshots</id>
-			<url>http://nexus.flyjenkins.org/content/repositories/flyJenkins-analysis/</url>
+			<id>flyJenkins-analysis</id>
+			<url>http://nexus.flyjenkins.org/content/repositories/</url>
 		</repository>
 	</distributionManagement>
 	
