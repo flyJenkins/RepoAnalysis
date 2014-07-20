@@ -62,9 +62,9 @@
 		
 		<!-- flyJenkins repository -->
 		<repository>
-			<id>snapshots</id>
+			<id>flyJenkins-analysis</id>
 			<name>flyJenkins Analysis repository</name>
-			<url>http://nexus.flyjenkins.org/content/repositories</url>
+			<url>http://nexus.flyjenkins.org/content/repositories/flyJenkins-analysis</url>
 		</repository>
 		
 		<!-- spring repository -->
