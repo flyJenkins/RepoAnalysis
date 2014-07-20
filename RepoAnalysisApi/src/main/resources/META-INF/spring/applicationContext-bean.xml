@@ -41,7 +41,7 @@
  	
  	<!-- Dao 등록 -->
  	<bean id="redisCacheDao" class="org.flyJenkins.cache.redis.RedisCacheDao">
- 		<!-- <property name="redisTemplate" ref="redisTemplate"></property> -->
+ 		<property name="redisTemplate" ref="redisTemplate"></property>
  	</bean>
  	
  	<!-- Service 등록 -->
