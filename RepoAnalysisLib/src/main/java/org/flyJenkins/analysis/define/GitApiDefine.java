@@ -9,7 +9,7 @@ public class GitApiDefine {
 	
 	public final static String GIT_API_SEARCH_URL = "https://api.github.com/search";
 	
-	public final static String GIT_STRATEGY_PACKAGE = "org.flyJenkins.github.analysis.strategy.";
+	public final static String GIT_STRATEGY_PACKAGE = "org.flyJenkins.analysis.strategy.";
 	
 	public final static String GIT_STRATEGY_NAME = "AnalysisStrategy";
 }
