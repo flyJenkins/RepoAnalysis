@@ -75,7 +75,12 @@
 	</repositories>
     
 	<dependencies>
-   	
+   		<dependency>
+			<groupId>flyJenkins-analysis</groupId>
+			<artifactId>org.flyJenkis.analysis</artifactId>
+			<version>1.0.0-BUILD-SNAPSHOT</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -233,14 +238,7 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.2</version>
 		</dependency>          
-		
-		<!-- SVN KIT --> 
-		<dependency>
-			<groupId>org.tmatesoft.svnkit</groupId>
-			<artifactId>svnkit</artifactId>
-			<version>1.8.3</version>
-		</dependency>
-
+			
 		<!-- swagger -->
 		<dependency>
 		    <groupId>com.mangofactory</groupId>
