@@ -1,4 +1,4 @@
-package org.flyJenkins.github.controller;
+package org.flyJenkins.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
