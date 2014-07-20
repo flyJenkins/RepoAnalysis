@@ -9,10 +9,10 @@
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	
 	<distributionManagement>
-		<repository>
+		<snapshotRepository>
 			<id>flyJenkins-analysis</id>
-			<url>http://nexus.flyjenkins.org/content/repositories/</url>
-		</repository>
+			<url>http://nexus.flyjenkins.org/content/repositories/flyJenkins-analysis</url>
+		</snapshotRepository>
 	</distributionManagement>
 	
 	<properties>
