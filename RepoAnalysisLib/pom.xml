@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.flyJenkins.analysis</groupId>
 	<artifactId>org.flyJenkis</artifactId>
-	<name>flyJenkins</name>
+	<name>flyJenkins analysis library</name>
 	<packaging>jar</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	
@@ -16,7 +16,6 @@
 	</properties>
 		
 	<build>
-		<finalName>com.github.api</finalName>
         <plugins>            	                  
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -56,14 +55,9 @@
 		
 		<!-- flyJenkins repository -->
 		<repository>
-			<id>release</id>
-			<name>flyJenkins repository</name>
-			<url>http://nexus.flyjenkins.org/content/repositories/releases/</url>
-		</repository>
-		<repository>
-			<id>snapshots</id>
-			<name>flyJenkins snapshots</name>
-			<url>http://nexus.flyjenkins.org/content/repositories/snapshots/</url>
+			<id>flyJenkinsAnalysisReleases</id>
+			<name>flyJenkins Analysis repository</name>
+			<url>http://nexus.flyjenkins.org/content/repositories/flyJenkins-analysis</url>
 		</repository>
 		
 		<!-- spring repository -->
@@ -78,17 +72,7 @@
 		    <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
 		    <url>http://repository.springsource.com/maven/bundles/external</url>
 		</repository>
-		
-		<repository>
-		    <id>spring-test-mvc</id>
-		    <name>libs-milestone </name>
-		    <url>http://repo.springsource.org/libs-milestone/</url>
-		</repository>
-		
-		<repository>
-    		<id>mesir-repo</id>
-    		<url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
-		</repository>				
+					
 	</repositories>
     
 	<dependencies>
