@@ -28,7 +28,7 @@
 	
 	
 	<!-- redis template definition -->
-  	<bean id="redisTemplateManger" class="org.springframework.data.redis.core.RedisTemplate"
+  	<bean id="redisTemplateManager" class="org.springframework.data.redis.core.RedisTemplate"
 	    p:connection-factory-ref="jedisConnectionFactory" 
 	    p:keySerializer-ref="jdkSerialization"
 	   	p:hashValueSerializer-ref="jdkSerialization"
@@ -45,7 +45,7 @@
  	
  	<!-- Dao 등록 -->
  	<bean id="redisCacheDao" class="org.flyJenkins.cache.redis.RedisCacheDao">
- 		<property name="redisTemplate" ref="redisTemplateManger"></property>
+ 		<property name="redisTemplate" ref="redisTemplateManager"></property>
  	</bean>
  	
  	<!-- Service 등록 -->
