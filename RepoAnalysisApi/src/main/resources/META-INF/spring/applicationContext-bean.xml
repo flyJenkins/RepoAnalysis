@@ -17,20 +17,24 @@
  	http://www.springframework.org/schema/util
  	http://www.springframework.org/schema/util/spring-util-3.1.xsd">
 	
-	<util:properties id="github" location="classpath:/META-INF/properties/github.xml" />
+	<!-- 
+		<util:properties id="github" location="classpath:/META-INF/properties/github.xml" />
+	 -->
 	
-	<!-- jedis Connection Setting -->     
+	<!-- jedis Connection Setting     
 	<bean id="jdkSerialization" class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
   	<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
  		p:use-pool="true"  p:host-name="127.0.0.1" p:port="6379" />
-		
-	<!-- redis template definition --> 
+	-->
+	
+	<!-- redis template definition 
   	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
 	    p:connection-factory-ref="jedisConnectionFactory" 
 	    p:keySerializer-ref="jdkSerialization"
 	   	p:hashValueSerializer-ref="jdkSerialization"
 	   	p:valueSerializer-ref="jdkSerialization" />  	
-	   	
+	-->
+	  
 	<!-- 수동 Xstream 설정 -->
 	<bean id="JsonHierarchicalStreamDriver" class="com.thoughtworks.xstream.io.json.JsonHierarchicalStreamDriver" />  	
 	   	
@@ -39,10 +43,11 @@
 	</bean>
  	<!--// 수동 Xstream 설정 끝 -->	
  	
- 	<!-- Dao 등록 -->
+ 	<!-- Dao 등록 
  	<bean id="redisCacheDao" class="org.flyJenkins.cache.redis.RedisCacheDao">
  		<property name="redisTemplate" ref="redisTemplate"></property>
  	</bean>
+ 	-->
  	
  	<!-- Service 등록 -->
  	<bean id="gitRepoAnalysisManager" class="org.flyJenkins.analysis.service.GitRepoAnalysisManagerImpl" />
