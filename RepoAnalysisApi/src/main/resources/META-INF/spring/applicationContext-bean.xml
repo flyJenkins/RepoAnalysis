@@ -21,11 +21,11 @@
 		<util:properties id="github" location="classpath:/META-INF/properties/github.xml" />
 	 -->
 	
-	<!-- jedis Connection Setting     
+	<!-- jedis Connection Setting -->    
 	<bean id="jdkSerialization" class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
   	<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
  		p:use-pool="true"  p:host-name="127.0.0.1" p:port="6379" />
-	-->
+	
 	
 	<!-- redis template definition 
   	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
