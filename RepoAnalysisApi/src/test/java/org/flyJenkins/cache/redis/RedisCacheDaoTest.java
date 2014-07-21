@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 import org.flyJenkins.cache.redis.model.RedisCacheDto;
 import org.flyJenkins.analysis.model.ProjectDto;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class RedisCacheDaoTest {
 	@Autowired
 	private RedisCacheDao redisCacheDao; 
 	
-	//@Ignore
+	@Ignore
 	@Test
 	public void setTest() {
 		redisCacheDao.delKey("testChannel");
@@ -35,12 +36,13 @@ public class RedisCacheDaoTest {
 		redisCacheDao.setValue(redisCacheDto.getChannelKey(), value);
 	}
 	
-	//@Ignore
+	@Ignore
 	@Test
 	public void setExpireTest() {
 		redisCacheDao.setExpire("testChannel", 10);
 	}
 	
+	@Ignore
 	@Test
 	public void getTest() {
 		ProjectDto projectDto = redisCacheDao.getValue("testChannel");

@@ -2,6 +2,7 @@ package org.flyJenkins.cache.redis.service;
 
 import org.flyJenkins.cache.redis.model.RedisCacheDto;
 import org.flyJenkins.analysis.model.ProjectDto;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class RedisCacheManagerImplTest {
 	@Autowired
 	private RedisCacheManagerImpl redisCacheManagerImpl;
 
+	@Ignore
 	@Test
 	public void saveCacheValueTest() {
 		ProjectDto projectDto = new ProjectDto();		
@@ -28,6 +30,7 @@ public class RedisCacheManagerImplTest {
 		redisCacheManagerImpl.saveCacheValue(redisCacheDto);
 	}
 
+	@Ignore
 	@Test
 	public void getCacheValue() {
 		redisCacheManagerImpl.getCacheValue("testChannel");

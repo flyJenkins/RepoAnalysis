@@ -43,11 +43,10 @@
 	</bean>
  	<!--// 수동 Xstream 설정 끝 -->	
  	
- 	<!-- Dao 등록 
+ 	<!-- Dao 등록 -->
  	<bean id="redisCacheDao" class="org.flyJenkins.cache.redis.RedisCacheDao">
- 		<property name="redisTemplate" ref="redisTemplate"></property>
+ 		<!-- <property name="redisTemplate" ref="redisTemplate"></property> -->
  	</bean>
- 	-->
  	
  	<!-- Service 등록 -->
  	<bean id="gitRepoAnalysisManager" class="org.flyJenkins.analysis.service.GitRepoAnalysisManagerImpl" />
