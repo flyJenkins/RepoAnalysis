@@ -3,7 +3,7 @@ package org.flyJenkins.analysis.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.flyJenkins.analysis.define.GitApiDefine;
+import org.flyJenkins.analysis.define.GitApiDefineEnum;
 import org.flyJenkins.analysis.model.CommitDto;
 import org.flyJenkins.analysis.model.GitHubRepoCmd;
 import org.flyJenkins.analysis.model.ReposDto;
@@ -32,7 +32,7 @@ public class GitHubApiManagerImpl implements GitHubApiManager {
 	@Override
 	public ReposDto getProjectInfo(GitHubRepoCmd gitHubRepoCmd) {
 		StringBuffer sbApiUrl = new StringBuffer();
-		sbApiUrl.append(GitApiDefine.GIT_API_REPOS_URL);
+		sbApiUrl.append(GitApiDefineEnum.GIT_API_REPOS_URL);
 		sbApiUrl.append("/"+gitHubRepoCmd.getOwner());
 		sbApiUrl.append("/"+gitHubRepoCmd.getRepo());
 		
@@ -55,7 +55,7 @@ public class GitHubApiManagerImpl implements GitHubApiManager {
 	@Override
 	public SearchCodeDto getSearchFileCode(GitHubRepoCmd gitHubRepoCmd) {
 		StringBuffer sbApiUrl = new StringBuffer();
-		sbApiUrl.append(GitApiDefine.GIT_API_SEARCH_URL);
+		sbApiUrl.append(GitApiDefineEnum.GIT_API_SEARCH_URL);
 		sbApiUrl.append("/code");
 		sbApiUrl.append("?q="+gitHubRepoCmd.getQuery());
 		sbApiUrl.append(" in:file");
@@ -82,7 +82,7 @@ public class GitHubApiManagerImpl implements GitHubApiManager {
 	@Override
 	public List<CommitDto> getProjectCommitInfo(GitHubRepoCmd gitHubRepoCmd) {
 		StringBuffer sbApiUrl = new StringBuffer();
-		sbApiUrl.append(GitApiDefine.GIT_API_REPOS_URL);
+		sbApiUrl.append(GitApiDefineEnum.GIT_API_REPOS_URL);
 		sbApiUrl.append("/"+gitHubRepoCmd.getOwner());
 		sbApiUrl.append("/"+gitHubRepoCmd.getRepo());
 		sbApiUrl.append("/commits");
@@ -107,7 +107,7 @@ public class GitHubApiManagerImpl implements GitHubApiManager {
 	 */
 	@Override
 	public String getRepositoryInfo(GitHubRepoCmd gitHubRepoCmd) {
-		String url = GitApiDefine.GIT_API_URL+gitHubRepoCmd.getRequestPath();
+		String url = GitApiDefineEnum.GIT_API_URL+gitHubRepoCmd.getRequestPath();
 		
 		ReposDto repos = new ReposDto();
 		ReposDto[] reposList = {};

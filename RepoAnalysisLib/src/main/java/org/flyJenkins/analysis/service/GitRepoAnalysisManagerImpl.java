@@ -2,7 +2,7 @@ package org.flyJenkins.analysis.service;
 
 import java.util.List;
 
-import org.flyJenkins.analysis.define.GitApiDefine;
+import org.flyJenkins.analysis.define.GitApiDefineEnum;
 import org.flyJenkins.analysis.model.CommitDto;
 import org.flyJenkins.analysis.model.GitHubRepoCmd;
 import org.flyJenkins.analysis.model.ProjectDto;
@@ -30,9 +30,9 @@ public class GitRepoAnalysisManagerImpl implements GitRepoAnalysisManager {
 			projectDto.setLanguage(projectLanguage);
 			
 			StringBuffer sbFileClassName = new StringBuffer();
-			sbFileClassName.append(GitApiDefine.GIT_STRATEGY_PACKAGE);
+			sbFileClassName.append(GitApiDefineEnum.GIT_STRATEGY_PACKAGE);
 			sbFileClassName.append(projectLanguage);
-			sbFileClassName.append(GitApiDefine.GIT_STRATEGY_NAME);
+			sbFileClassName.append(GitApiDefineEnum.GIT_STRATEGY_NAME);
 			
 			String strategyClassName = sbFileClassName.toString();
 			
