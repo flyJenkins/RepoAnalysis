@@ -21,7 +21,6 @@ public class RedisCacheDao implements DataCache {
 	
 	@PostConstruct
 	public void setIsCacheActive() {
-		System.out.println(redisTemplate+"realwater");
 		if (redisTemplate != null) {
 			this.isCacheActive = true;
 		}
