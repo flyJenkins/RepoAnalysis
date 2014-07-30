@@ -19,13 +19,13 @@ public class JAVAAnalysisStrategy implements LanguageAnalysisManager {
 		gitHubRepoCmd.setQuery("pom");
 		gitHubRepoCmd.setLanguage("xml");
 
-		// Project�?메이븐인�?체크
-		SearchCodeDto searchCodeDto = gitHubApiManager.getSearchFileCode(gitHubRepoCmd);
+		// Project 메이븐인지 체크
+		SearchCodeDto searchCodeDto = gitHubApiManager.getSearchFileCode(gitHubRepoCmd);		
 		if (searchCodeDto.getTotal_count() > 0) {
 			projectDto.setAnalysisChance("Y");
 			projectDto.setBuildType("maven");
 
-			// Project�?Spring ?��? 체크
+			// Project Spring 체크
 			gitHubRepoCmd.setQuery("application");
 			gitHubRepoCmd.setLanguage("xml");
 

@@ -15,7 +15,7 @@ public class JAVASCRIPTAnalysisStrategy implements LanguageAnalysisManager {
 	}
 	@Override
 	public void getGitAnalysisInfo(GitHubRepoCmd gitHubRepoCmd, ProjectDto projectDto) {
-		// Project�?node.js ?��? 체크
+		// Project node.js인지 체크
 		gitHubRepoCmd.setQuery("version");
 		gitHubRepoCmd.setLanguage("json");
 

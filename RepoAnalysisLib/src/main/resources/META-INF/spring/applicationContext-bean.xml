@@ -24,6 +24,7 @@
 		<constructor-arg ref="JsonHierarchicalStreamDriver" />	
 	</bean>
  	<!--// 수동 Xstream 설정 끝 -->	
+ 	
  	<!-- Service 등록 -->
  	<bean id="gitRepoAnalysisManager" class="org.flyJenkins.analysis.service.GitRepoAnalysisManagerImpl" />
  	
