@@ -1,6 +1,8 @@
 package org.flyJenkins.analysis.model;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
@@ -26,6 +28,8 @@ public class ProjectDto implements Serializable {
 	private String projectType;
 
 	private String commitSha;
+	
+	private List<Map<String, String>> confList;
 
 	public String getProjectName() {
 		return projectName;
@@ -73,5 +77,13 @@ public class ProjectDto implements Serializable {
 
 	public void setCommitSha(String commitSha) {
 		this.commitSha = commitSha;
+	}
+
+	public List<Map<String, String>> getConfList() {
+		return confList;
+	}
+
+	public void setConfList(List<Map<String, String>> confList) {
+		this.confList = confList;
 	}
 }
