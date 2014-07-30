@@ -4,6 +4,7 @@ import org.flyJenkins.analysis.model.GitHubRepoCmd;
 import org.flyJenkins.analysis.model.ProjectDto;
 import org.flyJenkins.analysis.service.GitHubApiManager;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +25,7 @@ public class AnalysisStrategyTest {
 		javaAnalysisStrategy = new JAVAAnalysisStrategy();
 	}
 
-	/**
-	 * 자바 분석기
-	 */
+	@Ignore
 	@Test
 	public void getJavaGitAnalysisInfoTest() {
 		GitHubRepoCmd gitHubRepoCmd = new GitHubRepoCmd();
