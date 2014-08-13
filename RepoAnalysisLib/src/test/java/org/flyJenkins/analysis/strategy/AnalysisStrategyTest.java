@@ -12,11 +12,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:META-INF/spring/applicationContext*"})
+@ContextConfiguration(locations={"classpath:META-INF/spring/application*"})
 public class AnalysisStrategyTest {
 	
 	@Autowired
-	private GitHubApiManager gitHubApiManagerImpl;
+	private GitHubApiManager gitHubApiManager;
 	
 	private JAVAAnalysisStrategy javaAnalysisStrategy;
 	
@@ -25,7 +25,7 @@ public class AnalysisStrategyTest {
 		javaAnalysisStrategy = new JAVAAnalysisStrategy();
 	}
 
-	@Ignore
+	//@Ignore
 	@Test
 	public void getJavaGitAnalysisInfoTest() {
 		GitHubRepoCmd gitHubRepoCmd = new GitHubRepoCmd();
@@ -36,7 +36,7 @@ public class AnalysisStrategyTest {
 		projectDto.setProjectName("RepoAnalysis");
 		projectDto.setLanguage("JAVA");
 		
-		javaAnalysisStrategy.setGitHubApiManager(gitHubApiManagerImpl);
+		javaAnalysisStrategy.setGitHubApiManager(gitHubApiManager);
 		javaAnalysisStrategy.getGitAnalysisInfo(gitHubRepoCmd, projectDto);
 	}
 }
